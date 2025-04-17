@@ -81,7 +81,7 @@
             disabled={game.disabled}
           >
             <img
-              src={game.imageUrl}
+              src={`/adventure-games${game.imageUrl}`}
               alt={game.name}
               on:error={handleImageError}
             />
@@ -294,6 +294,8 @@
     overflow: hidden;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     height: 350px;
+    padding: 0;
+    border: none;
   }
 
   .game-card.disabled {
@@ -310,6 +312,7 @@
     width: 100%;
     height: 290px;
     object-fit: cover;
+    border-radius: 7px 7px 0 0;
   }
 
   .game-card h3 {
